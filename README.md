@@ -42,5 +42,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Albo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Albo (albo.com, formerly albo.mx) is a Mexican digital financial services company founded in 2016 and operating since 2022 as an Institución de Fondos de Pago Electrónico (IFPE) authorized by the CNBV and regulated by Banco de México. It ships a mobile-first personal account with a Mastercard debit card (SPEI transfers, bill payments, cash in/out) and "albo empresa", a business account for payroll, employee cards and bulk dispersion of up to 3,000 transactions at a time.
+
+**No public developer program.** As of 2026-08-06 Albo publishes no developer portal, API reference, OpenAPI/AsyncAPI/GraphQL specification, SDK, webhook catalog, public Postman collection or sandbox. Every developer-shaped hostname probed on both `albo.com` and `albo.mx` (`api.`, `developers.`, `developer.`, `docs.`, `business.`, `negocios.`) fails to resolve. See `x-coverage` in `apis.yml` for the probe evidence.
+
+- https://www.albo.com/

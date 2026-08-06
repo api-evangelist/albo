@@ -1,0 +1,54 @@
+# Albo
+
+> Albo (albo.com, formerly albo.mx) is a Mexican digital financial services company
+> founded in 2016. Since 2022 it operates as an Institución de Fondos de Pago Electrónico
+> (IFPE) authorized by the Comisión Nacional Bancaria y de Valores (CNBV) and regulated by
+> Banco de México. Albo ships a mobile-first personal account with a Mastercard debit card
+> (SPEI transfers, bill payments, cash deposit/withdrawal at partner locations, real-time
+> notifications) and "albo empresa", a business account for payroll, employee cards and
+> bulk dispersion of up to 3,000 transactions at a time.
+
+## Status of the developer surface
+
+Albo publishes no public developer program. As of 2026-08-06 there is no developer portal,
+no API reference, no OpenAPI / AsyncAPI / GraphQL specification, no SDK or client library
+on any public package registry, no webhook catalog, no public Postman collection, and no
+sandbox. Every developer-shaped hostname probed (api., developers., developer., docs.,
+business., negocios. on both albo.com and albo.mx) fails to resolve. Albo's products are
+end-user apps; integration with Albo accounts is reached, when at all, through third-party
+open-banking aggregators rather than a first-party Albo API.
+
+## Products
+
+- [albo personal](https://www.albo.com/albo/personal.html): Digital account + Mastercard debit card, SPEI transfers, bill payments, cash in/out
+- [albo empresa](https://www.albo.com/empresa/home.html): Business account, payroll, employee cards, bulk dispersion (up to 3,000 transactions at once)
+- [abea](https://www.abea.mx/): Personal credit — independent partner (Aureo Lab), not an Albo product
+- [albit](https://www.albit.app/): Crypto buy/sell/transfer — independent partner (Indigo DeFi), not an Albo product
+
+## Company
+
+- [Home](https://www.albo.com/)
+- [Nosotros / About](https://www.albo.com/albo/nosotros.html)
+- [Empleo / Careers](https://www.albo.com/albo/empleo.html)
+- [Guía de seguridad / Security guide](https://www.albo.com/albo/guia-de-seguridad.html)
+
+## Commercial
+
+- [Costos y comisiones / Pricing](https://www.albo.com/albo/costos-y-comisiones.html)
+- [Sign up (albo empresa)](https://onboarding.albo.live/sign-up)
+- [Términos y condiciones](https://www.albo.com/albo/terminos-y-condiciones.html)
+- [Aviso de privacidad](https://www.albo.com/albo/aviso-de-privacidad.html)
+
+## Support
+
+- [Centro de Ayuda](https://ayuda.albo.mx/hc/es-419)
+- Business support: ayudaempresas@albo.mx
+- Press: prensa@albo.com
+
+## API Evangelist profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/albo/refs/heads/main/apis.yml)
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/albo/refs/heads/main/security/albo-domain-security.yml)
+- [Well-known probe index](https://raw.githubusercontent.com/api-evangelist/albo/refs/heads/main/well-known/albo-well-known.yml)
+
+<!-- generated: 2026-08-06 | method: generated | source: apis.yml + repo artifacts + probes of www.albo.com -->

@@ -1,17 +1,36 @@
 aid: albo
 name: Albo
-description: 'Albo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Albo (albo.com, formerly albo.mx) is a Mexican digital financial services
+  company founded in 2016 and operating since 2022 as an Institución de Fondos de Pago
+  Electrónico (IFPE) authorized by the Comisión Nacional Bancaria y de Valores (CNBV)
+  and regulated by Banco de México. Albo ships a mobile-first personal account with
+  a Mastercard debit card — SPEI transfers, bill payments, cash deposit and withdrawal
+  at partner locations, and real-time notifications — alongside "albo empresa", a business
+  account for payroll, employee cards, and bulk dispersion of up to 3,000 transactions
+  at a time. Adjacent credit (abea, by Aureo Lab) and crypto (albit, by Indigo DeFi)
+  products are offered by independent partners. Albo publishes no public developer program:
+  no developer portal, API reference, OpenAPI/AsyncAPI specification, SDK, webhook catalog,
+  or sandbox was found on any albo.com, albo.mx or albo.live host.'
 url: https://raw.githubusercontent.com/api-evangelist/albo/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/6a0bcc576e3f8669b332d482/6a456f99a236466733228c78_logo_albo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Banking
+- Financial Services
+- Fintech
+- Neobank
+- Digital Banking
+- Payments
+- Mexico
+- Latin America
+- Consumer Finance
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,50 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/albo-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.albo.com/
+- type: Support
+  url: https://ayuda.albo.mx/hc/es-419
+- type: Pricing
+  url: https://www.albo.com/albo/costos-y-comisiones.html
+- type: SignUp
+  url: https://onboarding.albo.live/sign-up
+- type: TermsOfService
+  url: https://www.albo.com/albo/terminos-y-condiciones.html
+- type: PrivacyPolicy
+  url: https://www.albo.com/albo/aviso-de-privacidad.html
+- type: LinkedIn
+  url: https://www.linkedin.com/company/albomx/
+- type: Twitter
+  url: https://x.com/albomx
+- type: YouTube
+  url: https://www.youtube.com/channel/UCBG0r1P06VUp8XrbN_OPNpA
+- type: LLMsTxt
+  url: llms/albo-llms.txt
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Albo ships only end-user apps — every developer-shaped hostname (api., developers.,
+    developer., docs., business., negocios. on both albo.com and albo.mx) fails to resolve,
+    and the Webflow marketing site answers 404 for /openapi.json, /llms.txt, /api-docs and
+    every /.well-known/ path.
+  evidence:
+  - url: https://developers.albo.com/
+    status: 0
+  - url: https://api.albo.mx/
+    status: 0
+  - url: https://www.albo.com/openapi.json
+    status: 404
+  - url: https://www.albo.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.albo.com/developers
+    status: 404
+  checked: '2026-08-06'

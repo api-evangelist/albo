@@ -1,0 +1,103 @@
+generated: '2026-08-06'
+method: probed
+source: live HTTP probes of every albo host that resolves
+note: >-
+  No /.well-known/ document was found on any Albo host. www.albo.com is a Webflow
+  marketing site that answers HTTP 404 with a Spanish "Página no encontrada" HTML page
+  for every unknown path — including /robots.txt and /sitemap.xml, which do not exist.
+  onboarding.albo.live is a single-page-app catch-all that answers HTTP 200 with the
+  SAME 3,275-byte HTML shell for EVERY path probed; none of its 200s are real documents
+  and none were accepted. No security.txt, no OIDC/OAuth discovery, no api-catalog,
+  no ai-plugin, no agent card, no llms.txt.
+hosts:
+- host: www.albo.com
+  behavior: returns 404 + HTML error page for unknown paths (honest 404)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 200
+    accepted: false
+    reason: body is the HTML 404 page, not a robots.txt
+  - path: /sitemap.xml
+    status: 404
+- host: onboarding.albo.live
+  behavior: SPA catch-all — HTTP 200 + identical 3275-byte HTML shell for every path
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/openid-configuration
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/api-catalog
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/agent-card.json
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /.well-known/agent.json
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /llms.txt
+    status: 200
+    accepted: false
+    reason: html-catch-all
+  - path: /robots.txt
+    status: 200
+    accepted: true
+    reason: 'real text/plain robots.txt (User-agent: * / Disallow:) — nothing disallowed'
+documents_found: 0
+non_resolving_hosts:
+- api.albo.mx
+- developers.albo.mx
+- developer.albo.mx
+- docs.albo.mx
+- business.albo.mx
+- negocios.albo.mx
+- api.albo.com
+- developers.albo.com
+- developer.albo.com
+- docs.albo.com
+- business.albo.com
+- negocios.albo.com
+- empresas.albo.com
+- status.albo.com
+- trust.albo.com
+- blog.albo.com
+- help.albo.com
+- app.albo.com
+- api.albo.live
