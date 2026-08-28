@@ -12,6 +12,17 @@ description: 'Albo (albo.com, formerly albo.mx) is a Mexican digital financial s
   no developer portal, API reference, OpenAPI/AsyncAPI specification, SDK, webhook catalog,
   or sandbox was found on any albo.com, albo.mx or albo.live host.'
 url: https://raw.githubusercontent.com/api-evangelist/albo/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/6a0bcc576e3f8669b332d482/6a456f99a236466733228c78_logo_albo.png
 x-type: company
 x-source: harvest:secondary-market
