@@ -46,7 +46,7 @@ modified: '2026-08-06'
 tags:
 - Company
 - Banking
-- Financial-Services
+- Financial Services
 - Fintech
 - Neobank
 - Digital Banking
@@ -65,6 +65,7 @@ tags_raw:
 - Mexico
 - Latin America
 - Consumer Finance
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
